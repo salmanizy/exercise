@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Salman</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #dff5e1;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "left content right"
+                "footer footer footer";
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #a5d6a7;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #fff;
+        }
+
+        .left-menu, .right-menu {
+            background-color: #c8e6c9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #a5d6a7;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "header"
+                    "left"
+                    "content"
+                    "right"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+
+            .left-menu, .right-menu {
+                order: 1;
+            }
+
+            .content {
+                order: 0;
+            }
+        }
+
+        .profile-photo {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #a5d6a7;
+        }
+
+        h2 {
+            color: #388e3c;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Profil Salman Al Farisy Azhar</h1>
+        </header>
+
+        <aside class="left-menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#biodata" style="text-decoration: none; color: #388e3c;">Biodata</a></li>
+                <li><a href="#profile" style="text-decoration: none; color: #388e3c;">Profil Ringkas</a></li>
+                <li><a href="#academic" style="text-decoration: none; color: #388e3c;">Pengalaman Akademik</a></li>
+                <li><a href="#work" style="text-decoration: none; color: #388e3c;">Pengalaman Kerja</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section id="biodata">
+                <h2>Biodata</h2>
+                <img src="https://via.placeholder.com/500" alt="Foto Salman" class="profile-photo">
+                <p><strong>Nama:</strong> Salman Al Farisy Azhar</p>
+                <p><strong>Tanggal Lahir:</strong> 15 Agustus 2003</p>
+                <p><strong>Status:</strong> Mahasiswa BINUS</p>
+                <p><strong>Hobi:</strong> Basket</p>
+            </section>
+
+            <section id="profile">
+                <h2>Profil Ringkas</h2>
+                <p>Saya adalah mahasiswa aktif di BINUS yang saat ini sedang magang di bidang teknologi. Saya tertarik dengan dunia Website, serta senang belajar hal baru untuk mengembangkan potensi diri.</p>
+            </section>
+
+            <section id="academic">
+                <h2>Pengalaman Akademik</h2>
+                <ul>
+                    <li>Mahasiswa Teknik Informatika - BINUS</li>
+                </ul>
+            </section>
+
+            <section id="work">
+                <h2>Pengalaman Kerja</h2>
+                <ul>
+                    <li>Peserta Magang di Manufaktur</li>
+                    <li>Freelance Graphic Designer</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="right-menu">
+            <h2>Koneksi</h2>
+            <p>Email: salmanazhar46@gmail.com</p>
+            <p>LinkedIn: <a href="#" style="color: #388e3c; text-decoration: none;">linkedin.com/in/salmanizy</a></p>
+            <p>GitHub: <a href="#" style="color: #388e3c; text-decoration: none;">github.com/salmanizy</a></p>
+        </aside>
+
+        <footer>
+            <p>&copy; 2024 Salman Al Farisy Azhar. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

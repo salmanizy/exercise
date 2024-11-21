@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Salman</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --main-bg-color: #e0e0e0;
+            --header-bg-color: #00356f;
+            --content-bg-color: #ffffff;
+            --font-color: #333;
+            --highlight-color: #0044ff;
+            --font-family: 'Plus Jakarta Sans', sans-serif;
+            --font-size-large: 1.6rem;
+            --font-size-medium: 1.2rem;
+            --font-size-small: 1rem;
+            --padding: 20px;
+            --border-radius: 10px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            background-color: var(--main-bg-color);
+            color: var(--font-color);
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "left content right"
+                "footer footer footer";
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 20px;
+            padding: var(--padding);
+        }
+
+        header {
+            grid-area: header;
+            background-color: var(--header-bg-color);
+            padding: var(--padding);
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: var(--font-size-large);
+        }
+
+        .left-menu, .right-menu {
+            background-color: var(--content-bg-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .content {
+            grid-area: content;
+            background-color: var(--content-bg-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: var(--header-bg-color);
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "header"
+                    "left"
+                    "content"
+                    "right"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+
+            .left-menu, .right-menu {
+                order: 1;
+            }
+
+            .content {
+                order: 0;
+            }
+        }
+
+        .profile-photo {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid var(--header-bg-color);
+        }
+
+        h2 {
+            color: var(--highlight-color);
+            margin-bottom: 10px;
+            font-size: var(--font-size-medium);
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: var(--font-size-small);
+        }
+
+        footer p {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            font-size: var(--font-size-small);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--highlight-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Profil Salman Al Farisy Azhar</h1>
+        </header>
+
+        <aside class="left-menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#biodata">Biodata</a></li>
+                <li><a href="#profile">Profil Ringkas</a></li>
+                <li><a href="#academic">Pengalaman Akademik</a></li>
+                <li><a href="#work">Pengalaman Kerja</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section id="biodata">
+                <h2>Biodata</h2>
+                <img src="https://via.placeholder.com/150" alt="Foto Salman" class="profile-photo">
+                <p><strong>Nama:</strong> Salman Al Farisy Azhar</p>
+                <p><strong>Tanggal Lahir:</strong> 15 Agustus 2003</p>
+                <p><strong>Status:</strong> Mahasiswa BINUS</p>
+                <p><strong>Hobi:</strong> Basket</p>
+            </section>
+
+            <section id="profile">
+                <h2>Profil Ringkas</h2>
+                <p>Saya adalah mahasiswa aktif di BINUS yang saat ini sedang magang di bidang teknologi. Saya tertarik dengan dunia AI dan Data Science, serta senang belajar hal baru untuk mengembangkan potensi diri.</p>
+            </section>
+
+            <section id="academic">
+                <h2>Pengalaman Akademik</h2>
+                <ul>
+                    <li>Mahasiswa Sistem Informasi - BINUS</li>
+                    <li>Anggota Himpunan Mahasiswa Teknologi Informasi</li>
+                    <li>Peserta lomba Data Science tingkat nasional</li>
+                </ul>
+            </section>
+
+            <section id="work">
+                <h2>Pengalaman Kerja</h2>
+                <ul>
+                    <li>Peserta Magang di Startup AI</li>
+                    <li>Freelance Data Analyst</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="right-menu">
+            <h2>Koneksi</h2>
+            <p>Email: salmanazhar46@gmail.com</p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/salmanizy</a></p>
+            <p>GitHub: <a href="#">github.com/salmanizy</a></p>
+        </aside>
+
+        <footer>
+            <p>&copy; 2024 Salman Al Farisy Azhar. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Elon Musk</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #1f2833;
+            --text-color: #333;
+            --background-gradient: linear-gradient(135deg, #4a90e2, #1f2833);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--background-gradient);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 900px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-info {
+            max-width: 600px;
+        }
+
+        .profile-info p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
+        .gradient-div {
+            background: radial-gradient(circle, #4a90e2, #ffffff);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .gradient-div h2 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f0f4f8;
+        }
+
+        tr:hover {
+            background-color: #e0ebf5;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .footer::after {
+            content: "Created by Salman Al Farisy Azhar";
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Profil Elon Musk</h1>
+        </div>
+
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="Elon Musk">
+            <div class="profile-info">
+                <p><strong>Nama:</strong> Elon Reeve Musk</p>
+                <p><strong>Tanggal Lahir:</strong> 28 Juni 1971</p>
+                <p><strong>Asal:</strong> Pretoria, Afrika Selatan</p>
+                <p><strong>Profesi:</strong> Pengusaha, Insinyur, Investor</p>
+            </div>
+        </div>
+
+        <div class="gradient-div">
+            <h2>Informasi Tambahan</h2>
+            <p>Elon Musk adalah pendiri, CEO, dan chief engineer di SpaceX; CEO dan arsitek produk di Tesla, Inc.; pemilik dan CEO X.com (dahulu Twitter); serta banyak peran penting lainnya.</p>
+        </div>
+
+        <h2>Pencapaian</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tahun</th>
+                    <th>Pencapaian</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2002</td>
+                    <td>Mendirikan SpaceX</td>
+                </tr>
+                <tr>
+                    <td>2008</td>
+                    <td>Meluncurkan Tesla Roadster</td>
+                </tr>
+                <tr>
+                    <td>2015</td>
+                    <td>Mendirikan OpenAI</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Menjadi orang terkaya di dunia</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

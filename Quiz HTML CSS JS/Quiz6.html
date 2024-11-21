@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #396cd4;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border: 2px solid #252525;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #252525;
+            text-align: center;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .personal-info {
+            margin-bottom: 20px;
+        }
+
+        .personal-info p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #252525;
+            margin: 8px 0;
+        }
+
+        .info-label {
+            font-weight: 800;
+            color: #252525;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #252525;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #252525;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f0f4f8;
+        }
+
+        tr:hover {
+            background-color: #e0ebf5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Profil Saya</h1>
+        
+        <div class="personal-info">
+            <p><span class="info-label">Nama:</span> Salman Al Farisy Azhar</p>
+            <p><span class="info-label">Alamat:</span> Jl. Menteng Utama I</p>
+            <p><span class="info-label">Tanggal Lahir:</span> 15 Agustus 2003</p>
+        </div>
+
+        <h2 style="color: #4677f4; text-align: center;">Pendidikan</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tingkat</th>
+                    <th>Institusi</th>
+                    <th>Tahun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SMA</td>
+                    <td>SMAN 1 Jakarta</td>
+                    <td>2018 - 2021</td>
+                </tr>
+                <tr>
+                    <td>S1</td>
+                    <td>Universitas Bina Nusantara</td>
+                    <td>2021 - 2025</td>
+                </tr>
+                <tr>
+                    <td>S2</td>
+                    <td>Institut Teknologi Bandung</td>
+                    <td>2026 - 2028</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
