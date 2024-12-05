@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greetings_1(name) {
+            name = `Hello Mr/Mrs ${name}, have a nice day`;
+            return name;
+        }
+
+        function greetings_2(person) {
+            person.name = `Hello ${person.name}, have a nice day!`;
+            return person.name;
+        }
+
+        let myName = "John Doe";
+        let result1 = greetings_1(myName);
+        console.log(result1);
+        console.log(myName);
+        
+
+        let obj1 = { name: "Jane Smith" };
+        let obj2 = obj1;
+
+        // Before Function Greetings 2
+        console.log(obj1)
+        console.log(obj2)
+        
+        greetings_2(obj1)
+        
+        // After Function Greetings 2
+        console.log(obj1)
+        console.log(obj2)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Parameter</title>
+</head>
+<body>
+    <script>
+        function findMin(...numbers) {
+            if (numbers.length === 0) {
+                return "Tidak ada angka yang diberikan";
+            }
+
+            let min = numbers[0];
+
+            for(let i = 1; i < numbers.length; i++){
+                if (numbers[i] < min){
+                    min = numbers[i];
+                }
+            }
+            return min
+        }
+
+        console.log(findMin(-100, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+    </script>
+</body>
+</html>
