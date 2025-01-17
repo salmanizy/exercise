@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keluarga</title>
+</head>
+<body>
+
+    <div id="famMember"></div>
+
+    <script>
+        const text = 
+        '{"name" : "John", "lastName" : "Doe", "age": 30, "married": true, "spouse":{"name": "Merry", "lastName": "Joyce", "age": 25, "married": true}, "childrens" : [{"name" : "Adam", "age": 10}, {"name": "Eve", "age": 8}]}';
+        const obj = JSON.parse(text);
+
+        const { name, lastName, age, married, spouse, childrens } = obj;
+        
+        console.log(obj);
+        console.log(spouse);
+        console.log(childrens);
+
+        document.getElementById('famMember').innerHTML = `Father: ${obj.name} ${obj.lastName} (${obj.age})<br>
+        Wife: ${spouse.name} ${spouse.lastName} (${spouse.age}) <br>
+        Childrens: ${childrens[0].name} (${childrens[0].age}) & ${childrens[1].name} (${childrens[1].age})`;
+    </script>
+</body>
+</html>

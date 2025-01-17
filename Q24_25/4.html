@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <heаd>
+        <title>Belajar Document Fragment</title>
+    </head>
+    <body>
+        <div id=”first-div”>
+            <ul></ul>
+        </div>
+
+        <script>
+            const list = ["List 1", "List 2", "List 3", "List 4"]
+
+            const fragment = document.createDocumentFragment()
+
+            for(let i in list){
+                const li = document.createElement("li");
+                li.textContent = list[i]
+                fragment.appendChild(li);
+                document.getElementsByTagName("ul")[0].appendChild(fragment)
+            }
+        </script>
+    </body>
+</html>

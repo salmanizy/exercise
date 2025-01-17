@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <heаd>
+        <title>Belajar Document Fragment</title>
+    </head>
+    <body>
+        <div>
+            <div id="first-div">
+                <ul></ul>
+            </div>
+        </div>
+
+        <script> 
+            const list = "Contoh Penambahan Element";
+            const ulFrag = document.createDocumentFragment();
+            
+            const li = document.createElement('li');
+            li.textContent = list;
+            ulFrag.appendChild(li);
+            
+            const ulElement = document.getElementsByTagName('ul')[0]
+            ulElement.appendChild(ulFrag);
+
+
+            const comment = document.createComment("Contoh Penambahan Comment")
+            const comFrag = document.createDocumentFragment();
+            comFrag.appendChild(comment);
+            
+            const parentDiv = document.getElementById('first-div');  
+            parentDiv.parentNode.insertBefore(comFrag, parentDiv);
+        </script>  
+    </body>
+</html>

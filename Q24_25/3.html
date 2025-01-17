@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <heаd>
+        <title>Belajar Element Collection</title>
+    </head>
+    <body>
+        <p  class="first-desc"> Deskripsi  1</p>
+        <p  class="second-desc">Deskripsi 2</p>
+        <p  class="second-desc">Deskripsi 3</p>
+        <p  class="second-desc">Deskripsi 4</p>
+        <p  class="first-desc">Deskripsi 5</p>
+        <p  class="second-desc">Deskripsi 6</p>
+
+        <script>
+            // Mendapatkan node list dengan querySelectorAll untuk "second-desc"
+            const secondDescNodes = document.querySelectorAll(".second-desc");
+
+            // Looping menggunakan entries() untuk menampilkan alert tiap node
+            for (const [i, node] of secondDescNodes.entries()) {
+                alert(`Node ${i + 1}: ${node.textContent.trim()}`);
+            }
+        </script>
+    </body>
+</html>
