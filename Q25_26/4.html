@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelinci</title>
+</head>
+<body>
+    <script>
+    let kelinci = {
+        makan(makanan) {
+            perut: [],
+            this.perut.push(makanan);
+        }
+    };
+    
+    let putih = {
+        __proto__: kelinci
+    };
+    putih.perut = []
+    
+    let coklat = {
+        __proto__: kelinci
+    };
+    coklat.perut = []
+    
+    putih.makan("Wortel");
+    alert( `Makanan Kelinci Putih = ${putih.perut}` );
+      
+    coklat.makan("Wortel")
+    alert( `Makanan Kelinci Coklat = ${coklat.perut}` );
+    </script>
+</body>
+</html>

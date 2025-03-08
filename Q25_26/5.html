@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM Persegi Panjang</title>
+</head>
+<body>
+    <element-area width="10" length="5"></element-area>
+
+    <script>
+
+        customElements.define('element-area', class extends HTMLElement{
+            connectedCallback(){
+                const shadow = this.attachShadow({ mode: 'closed' });
+                const width = this.getAttribute('width');
+                const length = this.getAttribute('length');
+                const area = width * length;
+                shadow.innerHTML = `<h1>Hasil dari luas ${width} x ${length} adalah ${area}</h1>`;
+            }
+        });
+    </script>
+</body>
+</html>

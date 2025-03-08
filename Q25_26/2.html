@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener Capturing dan Bubbling</title>
+    <style>
+        form, div, p {
+            padding: 100px;
+            margin: 20px;
+            border: 6px solid black;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="myForm">
+        FORM
+        <div id="myDiv">
+            DIV
+            <p id="myParagraph">PARAGRAPH</p>
+        </div>
+    </form>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const div = document.getElementById('myDiv');
+        const paragraph = document.getElementById('myParagraph');
+
+        function handleCapturing(e) {
+            alert("capturing: " + e.target.tagName);
+            e.target.style.background = 'red';
+        }
+
+        function handleBubbling(e) {
+            alert("bubbling: " + e.target.tagName);
+            e.target.style.background = 'yellow';
+        }
+
+        form.addEventListener('click', handleCapturing, true);
+        div.addEventListener('click', handleCapturing, true);
+        paragraph.addEventListener('click', handleCapturing, true);
+        paragraph.addEventListener('contextmenu', handleBubbling, false);
+        div.addEventListener('contextmenu', handleBubbling, false);
+        form.addEventListener('contextmenu', handleBubbling, false);
+    </script>
+</body>
+</html>
