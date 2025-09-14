@@ -8,11 +8,15 @@ const NameComponent = () => {
     alert(`Usernamenya, ${userName}!`);
   };
 
+  const handleNameChange = (e) => {
+    setUserName(e.target.value);
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <label>
         Name
-        <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} />
+        <input type="text" value={userName} onChange={handleNameChange} />
       </label>
       <button type="submit">Submit</button>
     </form>
