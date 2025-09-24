@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production build
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editor
+.vscode/
+.idea/
+*.swp
+
+# Linaria cache
+/src/.linaria_cache
+
+# CRA cache
+/node_modules/.cache
+
+# Windows + Mac system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
