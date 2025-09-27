@@ -49,7 +49,7 @@ const LoginFormFinalForm = () => {
         }}
       >
         <Typography component="h1" variant="h5">
-          Form Pendaftaran (React Final Form + MUI Inline)
+          Register
         </Typography>
 
         <Form
