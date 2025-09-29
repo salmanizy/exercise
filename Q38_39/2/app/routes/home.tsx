@@ -1,4 +1,3 @@
-// app/routes/_index.tsx
 import type { MetaFunction, LinksFunction } from '@remix-run/node';
 import React from 'react';
 
